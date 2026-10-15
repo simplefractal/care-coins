@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin: award points</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+<div class="wrap topbar-inner">
+<div class="brand">
+<div class="logo" aria-hidden="true"></div>
+<div class="brand-name display"><span data-brand></span></div>
+<span class="badge-admin">Admin</span>
+</div>
+<nav class="nav">
+<a class="nav-link" href="index.html">Member view</a>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="wrap page-head">
+<h1 class="display">Team rewards</h1>
+<p class="lead" style="margin-bottom:0">Pick a team member, choose why they earned <span data-currency></span>, and award them.</p>
+</div>
+
+<div class="wrap" style="padding-top:20px">
+<div class="toast" id="toast" role="status" hidden style="margin-bottom:0">
+<div id="toastText"></div>
+<button class="btn btn-ghost btn-sm" id="toastDismiss" type="button">Dismiss</button>
+</div>
+</div>
+
+<div class="wrap admin-layout">
+<div class="panel members-panel">
+<h2>Team members</h2>
+<div class="scroll-x">
+<div class="members-table">
+<div class="member-head">
+<div>Member</div>
+<div>Role</div>
+<div>Location</div>
+<div class="right">Balance</div>
+</div>
+<div id="members"></div>
+</div>
+</div>
+</div>
+
+<div class="panel award-panel">
+<div>
+<h2>Award <span data-currency></span></h2>
+<div class="award-to">Awarding to <strong id="awardTo"></strong></div>
+</div>
+<div>
+<div class="field-label">Reason</div>
+<div class="chips" id="reasons"></div>
+</div>
+<div>
+<div class="field-label">Amount</div>
+<div class="stepper">
+<button class="step" id="dec" type="button" aria-label="Decrease amount by 5">&#8722;</button>
+<div class="stepper-value display" id="amount" aria-live="polite">25</div>
+<button class="step" id="inc" type="button" aria-label="Increase amount by 5">+</button>
+</div>
+</div>
+<button class="btn btn-primary btn-block" id="award" type="button"></button>
+</div>
+</div>
+
+<section class="wrap section" style="padding-top:40px">
+<h2 class="display" style="margin-bottom:20px">Activity across the team</h2>
+<div class="panel scroll-x">
+<div class="log-table" id="log"></div>
+</div>
+</section>
+</main>
+
+<footer class="wrap foot">
+<div class="foot-note">This is a demo with sample data. Nothing here is real.</div>
+<button class="btn btn-ghost" id="reset" type="button">Reset demo data</button>
+</footer>
+
+<script src="config.js"></script>
+<script src="state.js"></script>
+<script src="ui.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

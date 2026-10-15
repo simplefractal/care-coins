@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rewards</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+<div class="wrap topbar-inner">
+<div class="brand">
+<div class="logo" aria-hidden="true"></div>
+<div class="brand-name display"><span data-brand></span></div>
+</div>
+<nav class="nav">
+<a class="nav-link" href="admin.html">Admin view</a>
+<div class="persona">
+<div class="avatar" aria-hidden="true">MR</div>
+<div>Maya Reyes</div>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="wrap page-head">
+<h1 class="display">Your rewards</h1>
+<div class="hero">
+<div class="balance-card">
+<div class="balance-label">Available balance</div>
+<div class="balance-row">
+<div class="balance-num display" id="balance">0</div>
+<div class="balance-unit" data-currency></div>
+</div>
+<div class="balance-foot">
+<div>Earned <strong id="earned">0</strong></div>
+<div>Redeemed <strong id="redeemed">0</strong></div>
+</div>
+</div>
+<div class="progress-card">
+<div class="progress-label">Next reward</div>
+<div class="progress-title" id="nextTitle"></div>
+<div class="bar" id="bar" role="progressbar" aria-label="Progress to next reward" aria-valuemin="0" aria-valuemax="100">
+<div class="bar-fill" id="barFill"></div>
+</div>
+<div class="progress-note" id="progressNote"></div>
+</div>
+</div>
+</div>
+
+<section class="wrap section">
+<h2 class="display">Ways to earn <span data-currency></span></h2>
+<p class="lead">Show up, do great work, and it adds up automatically.</p>
+<div class="grid">
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg></div>
+<span class="badge">+3 per shift</span>
+</div>
+<h3>Correct check-in</h3>
+<p>Check in and out on time and on location for every shift.</p>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></div>
+<span class="badge">+25 per month</span>
+</div>
+<h3>Perfect attendance</h3>
+<p>Fill every scheduled shift in the month without a miss.</p>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M5 21v-8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8"/><path d="M5 16c2 1.5 3.5 1.5 5 0s3-1.5 4 0 3 1.5 5 0"/><path d="M12 7V4"/></svg></div>
+<span class="badge">+25 each year</span>
+</div>
+<h3>Birthday</h3>
+<p>A little something on your birthday, added to your balance.</p>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1.5 7.5 5-3 5 3-1.5-7.5"/></svg></div>
+<span class="badge">+25 each year</span>
+</div>
+<h3>Work anniversary</h3>
+<p>Celebrate every year with the team.</p>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14c2.6 0 4.5 1.7 4.5 4.5"/></svg></div>
+<span class="badge">+50 once</span>
+</div>
+<h3>Mentoring a new hire</h3>
+<p>Take a new teammate under your wing as their mentor.</p>
+</div>
+
+<div class="card">
+<div class="card-top">
+<div class="icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+<span class="badge">+50 per level</span>
+</div>
+<h3>Moving up a level</h3>
+<p>Earn a promotion or a new certification.</p>
+</div>
+
+</div>
+</section>
+
+<section class="wrap section">
+<h2 class="display">Redeem your <span data-currency></span></h2>
+<p class="lead">Pick a reward and it is sent to your email.</p>
+<div class="toast" id="toast" role="status" hidden>
+<div id="toastText"></div>
+<button class="btn btn-ghost btn-sm" id="toastDismiss" type="button">Dismiss</button>
+</div>
+<div class="grid" id="gifts"></div>
+</section>
+
+<section class="wrap section">
+<h2 class="display" style="margin-bottom:20px">Recent activity</h2>
+<div class="panel scroll-x">
+<div class="table" id="activity"></div>
+</div>
+</section>
+</main>
+
+<footer class="wrap foot">
+<div class="foot-note">This is a demo with sample data. Nothing here is real.</div>
+<button class="btn btn-ghost" id="reset" type="button">Reset demo data</button>
+</footer>
+
+<script src="config.js"></script>
+<script src="state.js"></script>
+<script src="ui.js"></script>
+<script src="member.js"></script>
+</body>
+</html>
